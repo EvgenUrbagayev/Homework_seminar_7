@@ -59,10 +59,8 @@ int[] GetArrayFromString(string parameters)
     {
         parameterNum[i] = int.Parse(parames[i]);
     }
-
     return parameterNum;
 }
-
 
 void ArithmeticMean(int[,] array)
 { 
@@ -73,9 +71,10 @@ void ArithmeticMean(int[,] array)
         for (int j = 0; j < array.GetLength(1); j++)
         {
             sum += array[i, j];
-            average = sum / array.GetLength(1);
-            average = Math.Round(average, 1);
+            
         }
+        average = sum / array.GetLength(1);
+        average = Math.Round(average, 1);
         Write($"Среднее арифметическое каждого столбца: {average}; ");
     }
 }
